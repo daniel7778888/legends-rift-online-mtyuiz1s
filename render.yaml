@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: rift-online
+    runtime: node
+    plan: free
+    buildCommand: npm install --no-audit --no-fund && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
