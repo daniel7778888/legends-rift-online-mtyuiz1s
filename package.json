@@ -1,0 +1,12 @@
+{
+  "name": "rift-map-study",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "mkdir -p sounds && cp src/assets/voice*.wav sounds/ && esbuild src/main.js --bundle --format=iife --platform=browser --target=es2020 --loader:.glb=dataurl --outfile=app.js",
+    "start": "node server/server.js"
+  },
+  "dependencies": { "three": "^0.161.0", "ws": "^8.18.0" },
+  "devDependencies": { "esbuild": "^0.21.5" }
+}
